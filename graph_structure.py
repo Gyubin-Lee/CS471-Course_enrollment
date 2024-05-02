@@ -33,6 +33,7 @@ class Graph:
     def __init__(self):
         self.nodes = []
         self.edges = []
+        self.max_weight = 0
     
     def get_all_codes(self):
         codes = []
@@ -55,6 +56,8 @@ class Graph:
     def normalize_edge_weight(self):
         #get maximum weight
         max_weight = max([edge.weight for edge in self.edges])
+        self.max_weight = max_weight
+        
         #normalize weight
         for edge in self.edges:
             edge.weight = edge.weight / max_weight

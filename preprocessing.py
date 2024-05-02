@@ -36,6 +36,8 @@ def preprocess_data(data):
     return graph
 
 if __name__=="__main__":
-    FILEPATH = 'dummy.csv'
+    FILEPATH = 'data.csv'
     data = load_data_as_array(FILEPATH)
     graph = preprocess_data(data)
+
+    pass
